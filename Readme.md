@@ -12,7 +12,7 @@ This repository contains the project for, the AI For Energy Hackaton 2020, of Te
 - Solomon Marvellous
 - Docemo Adekanmi
 
-## About The Data Set
+## About The Dataset
 The data set contains various features of different cars and thier carbon emission
 
 ### Keys
@@ -40,10 +40,10 @@ Fuel type
 - E = ethanol (E85)
 - N = natural gas
 
-- Fuel consumption	
+Fuel consumption	
 City and highway fuel consumption ratings are shown in litres per 100 kilometres (L/100 km) - the combined rating (55% city, 45% hwy) is shown in L/100 km and in miles per imperial gallon (mpg)
 
-- CO2 emissions	the tailpipe emissions of carbon dioxide (in grams per kilometre) for combined city and highway driving
+CO2 emissions	the tailpipe emissions of carbon dioxide (in grams per kilometre) for combined city and highway driving
 
 ## Functionality Of The AI
 

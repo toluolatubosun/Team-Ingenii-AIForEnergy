@@ -4,6 +4,10 @@ This repository contains the project for, the AI For Energy Hackaton 2020, of Te
 
 ## [Official Project Documentation](https://drive.google.com/file/d/1PK_7uUS_KQb-udFKvXjJnC-qv9JaMbyi/view?usp=sharing)
 
+```
+ingenii folder contains the UI made with Django
+```
+
 
 ## Team Members
 - Olatubosun John ( Team Leader )

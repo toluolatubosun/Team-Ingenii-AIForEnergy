@@ -1,0 +1,78 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{name}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <br>
+    <h1 class="text-center">Team Ingenii | Prediction & Suggestion</h1>
+    <br>
+
+    <h2 class="text-center">Enter Car Details</h2>
+    <form action="/result/" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="form-group col">
+                <input required type="text" class="form-control" id="make" name="make" placeholder="Make">
+            </div>
+
+            <div class="form-group col">
+                <input required type="text" class="form-control" id="model" name="model" placeholder="Model">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input required type="text" class="form-control" id="vehicle_class" name="vehicle_class" placeholder="Vehicle Class">
+        </div>
+
+        <div class="form-group">
+            <input required type="number" step=any class="form-control" id="engine_size" name="engine_size" placeholder="Engine Size(L)">
+        </div>
+
+        <div class="form-group">
+            <input required type="number" step=any class="form-control" id="cylinders" name="cylinders" placeholder="Cylinders">
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <input required type="text" class="form-control" id="transmission" name="transmission" placeholder="Transmission">
+            </div>
+
+            <div class="form-group col">
+                <input required type="text" class="form-control" id="transmission_type" name="transmission_type" placeholder="Transmission Type">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <input required type="text" class="form-control" id="fuel_type" name="fuel_type" placeholder="Fuel Type">
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <input required type="number" step=any  class="form-control" id="fc_city" name="fc_city" placeholder="Fuel Consumption City (L/100 km)">
+            </div>
+
+            <div class="form-group col">
+                <input required type="number" step=any  class="form-control" id="fc_hwy" name="fc_hwy" placeholder="Fuel Consumption Hwy (L/100 km)">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <input required type="number" step=any  class="form-control" id="fc_comb_l100" name="fc_comb_l100" placeholder="Fuel Consumption Comb (L/100 km)">
+            </div>
+
+            <div class="form-group col">
+                <input required type="number" step=any  class="form-control" id="fc_comb_mpg" name="fc_comb_mpg" placeholder="Fuel Consumption Comb (mpg)">
+            </div>
+        </div>
+        
+        <button id="fill" class="btn btn-outline-primary btn-block btn-lg">Fill Input</button>
+
+        <button type="submit" name="submit" class="btn btn-primary btn-block btn-lg">Submit</button>
+
+    </form>
+</div>
+{% endblock %}

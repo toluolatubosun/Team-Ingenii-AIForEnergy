@@ -1,0 +1,55 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+{{name}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <img class="rounded mx-auto d-block img-fluid" alt="logo" src="{% static 'img/Ingenii.png' %}">
+
+    <h1 class="text-center">Team Ingenii</h1>
+    <h4 class="text-center">AI For Energy Hackathon 2021</h4>
+    
+    <br><br><br>
+
+    <table class="table table-hover">
+        <thead style="background-color: #3399ff; color: #fff;">
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Institution</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">John Olatubosun</th>
+                <td>Team Leader / Machine Learning / Web Development / Documentation</td>
+                <td>Mountain Top University</td>
+            </tr>
+            <tr>
+                <th scope="row">Marvellous Solomon</th>
+                <td>Documentation / Web Development</td>
+                <td>Mountain Top University</td>
+            </tr>
+            <tr>
+                <th scope="row">Adekanmi Docemo</th>
+                <td>Graphics / UI & UX Design</td>
+                <td>Mountain Top University</td>
+            </tr>
+            <tr>
+                <th scope="row">Victor Oghene</th>
+                <td>Documentation / UI & UX Design</td>
+                <td>Mountain Top University</td>
+            </tr>
+            <tr>
+                <th scope="row">Toluwani Djoyi</th>
+                <td>Documentation / UI & UX Design</td>
+                <td>Mountain Top University</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}

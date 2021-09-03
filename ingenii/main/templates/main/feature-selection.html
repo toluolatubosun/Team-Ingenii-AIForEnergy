@@ -1,0 +1,42 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+{{name}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<br>
+	<h1 class="text-center">Team Ingenii | Feature Selection</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend lacus sed diam imperdiet hendrerit. Aenean et sapien ut odio hendrerit sagittis. Vestibulum laoreet est vitae libero bibendum sagittis. Sed ullamcorper bibendum dolor, sed fringilla nisi bibendum in. Vivamus mattis, mauris lobortis rutrum cursus, urna lorem tempor nisi, et cursus sem elit cursus dolor. Sed dui nisi, congue vel aliquam mollis, efficitur ac velit. Vestibulum non nulla id quam finibus pulvinar. Aliquam feugiat venenatis ex, a gravida arcu tincidunt id. Proin lacus lorem, tincidunt nec vulputate sit amet, maximus auctor velit. Donec orci magna, porta et justo vitae, cursus varius enim. Etiam vel nibh odio. Nulla purus sapien, scelerisque at pellentesque et, ullamcorper sit amet nibh. Donec congue nisl eget mi ullamcorper, non imperdiet nisl tempus. Suspendisse vitae tempor eros. Integer nec risus sagittis odio laoreet tincidunt.</p>
+	<br>
+
+	<h3 class="text-center">Feature Selection Algorithms</h3>
+	<br>
+	<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+		<li class="nav-item">
+		<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Select From Model</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Variance</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Correlation</a>
+		</li>
+	</ul>
+	<br>
+	<div class="tab-content" id="myTabContent">
+		<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend lacus sed diam imperdiet hendrerit. Aenean et sapien ut odio hendrerit sagittis. Vestibulum laoreet est vitae libero bibendum sagittis. 
+		</div>
+		<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend lacus sed diam imperdiet hendrerit. Aenean et sapien ut odio hendrerit sagittis. Vestibulum laoreet est vitae libero bibendum sagittis. 
+		</div>
+		<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend lacus sed diam imperdiet hendrerit. Aenean et sapien ut odio hendrerit sagittis. Vestibulum laoreet est vitae libero bibendum sagittis. 
+		</div>
+	</div>
+
+</div>
+{% endblock %}

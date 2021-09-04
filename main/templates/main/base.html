@@ -23,7 +23,19 @@
 </head>
 
 <body>
-	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+	<div class="loader">
+		<div style="margin-top: 8%;" class="text-center">
+			<div style="width: 18rem; height: 18rem; color: #3399ff;" class="spinner-border" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+		</div>
+		<img class="rounded mx-auto d-block img-fluid" alt="logo" src="{% static 'img/Ingenii.png' %}">
+	</div>
+	
+
+	<div id="content d-none">
+
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 			<a class="navbar-brand" href="#">Team Ingenii</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,18 +58,25 @@
 					</li>
 				</ul>
 			</div>
-	</nav>
+		</nav>
 
-	<br><br><br>
+		<br><br><br>
 
-	{% block content %}
-	{% endblock %}
+		{% block content %}
+		{% endblock %}
+
+	</div>
 
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script>
 		$( document ).ready(function() {
+			// Stops the loader when the page loads
+			$('.loader').addClass('d-none')
+			$('.content').removeClass('d-none')
+
+			// fills the predict & suggest form 
 			$('#fill').click((e) => { 
 				e.preventDefault()
 				$('#make').val('ACURA')
@@ -73,9 +92,13 @@
 				$('#fc_comb_l100').val(8.5)
 				$('#fc_comb_mpg').val(33)
 			})
+
+			// Stops the loading button from resubmitting the form
 			$('#loading').click((e) => {
 				e.preventDefault()
 			})
+
+			//  Shows a loading message when form is submited
 			$('#submit').click((e) => {
 				$('#loading').removeClass('d-none')
 				$('#submit').addClass('d-none')

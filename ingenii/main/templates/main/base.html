@@ -33,7 +33,7 @@
 	</div>
 	
 
-	<div id="content d-none">
+	<div class="content d-none">
 
 		<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
 			<a class="navbar-brand" href="#">Team Ingenii</a>
@@ -73,9 +73,11 @@
 	<script>
 		$( document ).ready(function() {
 			// Stops the loader when the page loads
-			$('.loader').addClass('d-none')
-			$('.content').removeClass('d-none')
-
+			setTimeout(() => {
+				$('.loader').addClass('d-none')
+				$('.content').removeClass('d-none')
+			}, 1000);
+			
 			// fills the predict & suggest form 
 			$('#fill').click((e) => { 
 				e.preventDefault()

@@ -73,6 +73,13 @@
 				$('#fc_comb_l100').val(8.5)
 				$('#fc_comb_mpg').val(33)
 			})
+			$('#loading').click((e) => {
+				e.preventDefault()
+			})
+			$('#submit').click((e) => {
+				$('#loading').removeClass('d-none')
+				$('#submit').addClass('d-none')
+			})
 		});
 	</script>
 </body>

@@ -10,6 +10,9 @@
     <h1 class="text-center">Team Ingenii | Prediction & Suggestion</h1>
     <br>
 
+    <h3 class="text-center">This Predictor uses a Linear Regression Model with 91% accuracy</h3>
+    <br>
+
     <h2 class="text-center">Enter Car Details</h2>
     <form action="/result/" method="POST">
         {% csrf_token %}
@@ -71,8 +74,14 @@
         
         <button id="fill" class="btn btn-outline-primary btn-block btn-lg">Fill Input</button>
 
-        <button type="submit" name="submit" class="btn btn-primary btn-block btn-lg">Submit</button>
+        <button id="submit" type="submit" name="submit" class="btn btn-primary btn-block btn-lg">Submit</button>
+
+        <button id="loading" class="btn btn-primary btn-block btn-lg d-none" type="button">
+            <span class="spinner-border spinner-border-sm" style="width: 2rem; height: 2rem;" role="status" aria-hidden="true"></span>
+            Loading...
+        </button>
 
     </form>
+    <br>
 </div>
 {% endblock %}

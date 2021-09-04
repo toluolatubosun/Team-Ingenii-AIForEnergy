@@ -9,7 +9,8 @@
 <div class="container">
 	<br>
 	<h1 class="text-center">Team Ingenii | Feature Selection</h1>
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend lacus sed diam imperdiet hendrerit. Aenean et sapien ut odio hendrerit sagittis. Vestibulum laoreet est vitae libero bibendum sagittis. Sed ullamcorper bibendum dolor, sed fringilla nisi bibendum in. Vivamus mattis, mauris lobortis rutrum cursus, urna lorem tempor nisi, et cursus sem elit cursus dolor. Sed dui nisi, congue vel aliquam mollis, efficitur ac velit. Vestibulum non nulla id quam finibus pulvinar. Aliquam feugiat venenatis ex, a gravida arcu tincidunt id. Proin lacus lorem, tincidunt nec vulputate sit amet, maximus auctor velit. Donec orci magna, porta et justo vitae, cursus varius enim. Etiam vel nibh odio. Nulla purus sapien, scelerisque at pellentesque et, ullamcorper sit amet nibh. Donec congue nisl eget mi ullamcorper, non imperdiet nisl tempus. Suspendisse vitae tempor eros. Integer nec risus sagittis odio laoreet tincidunt.</p>
+	<p>Feature Selection has to do with determining which features actually contribute to carbon emission. It has to do with analyzing the various input features to the output features (in our case carbon emission) using various algorithms to determine the important features. The importance of feature selection is that it reduces computation time while also helping the manufactures in making decisions.</p>
+	<p>For our Prediction and suggestion we use the features gotten Correlation</p>
 	<br>
 
 	<h3 class="text-center">Feature Selection Algorithms</h3>
@@ -28,15 +29,41 @@
 	<br>
 	<div class="tab-content" id="myTabContent">
 		<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend lacus sed diam imperdiet hendrerit. Aenean et sapien ut odio hendrerit sagittis. Vestibulum laoreet est vitae libero bibendum sagittis. 
+			Like the Recursive feature elimination, SelectFromModel from Scikit-Learn is based on a Machine Learning Model estimation for selecting the features. <br><br> The differences are that SelectFromModel feature selection is based on the importance attribute (often is coef_ or feature_importances_ but it could be any callable) threshold. By default, the threshold is the mean. 
+			<br><br>
+			Imprtant Features <br>
+			- Vehicle Class <br>
+			- Engine Size(L) <br>
+			- Cylinders <br>
+			- Transmission Type <br>
+			- Fuel Type <br>
+			- Fuel Consumption City (L/100 km) <br>
+			- Fuel Consumption Hwy (L/100 km) <br>
+			- Fuel Consumption Comb (L/100 km) <br>
+			- Fuel Consumption Comb (mpg) <br>
 		</div>
 		<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend lacus sed diam imperdiet hendrerit. Aenean et sapien ut odio hendrerit sagittis. Vestibulum laoreet est vitae libero bibendum sagittis. 
+			This is an unsupervised modelling approach because it does not work with the output data. <br><br> Feature with a higher variance means that the value within that feature varies or has a high cardinality. On the other hand, lower variance means the value within the feature are quite similar, and zero variance means you have a feature with the same value. <br><br> You would want to have a varied feature as we don’t want our predictive model to be biased. Variance Threshold is a simple approach to eliminate features based on our expected variance within each feature.  
+			<br><br>
+			Imprtant Features <br>
+			- Vehicle Class <br>
+			- Transmission Type <br>
+			- Fuel Consumption City (L/100 km) <br>
+			- Fuel Consumption Comb (L/100 km) <br>
+			- Fuel Consumption Comb (mpg) <br>
 		</div>
 		<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend lacus sed diam imperdiet hendrerit. Aenean et sapien ut odio hendrerit sagittis. Vestibulum laoreet est vitae libero bibendum sagittis. 
+			Correlation is a statistical term which in common usage refers to how close two variables are to having a linear relationship with each other.  <br><br>Features with high correlation are more linearly dependent and hence have almost the same effect on the dependent variable. So, when two features have a high correlation, we can drop one of the two features.
+			<br><br>
+			Imprtant Features <br>
+			- Engine Size(L)<br>
+			- Cylinders<br>
+			- Fuel Consumption City (L/100 km)<br>
+			- Fuel Consumption Hwy (L/100 km)<br>
+			- Fuel Consumption Comb (L/100 km)<br>
+			- Fuel Consumption Comb (mpg)<br>
 		</div>
 	</div>
-
+	<br>
 </div>
 {% endblock %}

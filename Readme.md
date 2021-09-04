@@ -9,6 +9,29 @@ This repository contains the project for, the AI For Energy Hackaton 2020, of Te
 - dataset.csv - Data on cars used in the project
 - `ingenii` - Django Project (UI)
 
+## Development Setup
+- Pull the code to your local machine
+```cmd
+git init
+git branch -M main
+git remote add origin https://github.com/toluolatubosun/Team-Ingenii-AIForEnergy.git
+git pull origin main
+```
+- Setup a virtual enviroment
+```cmd
+pip install virtualenv
+virtualenv venv
+```
+- Install the needed packages
+```cmd
+pip install -r requirements.txt
+```
+- Run the django UI
+```cmd
+cd ingenii
+python manage.py runserver
+```
+- It is advised to run the model.ipynb file on google collaboratory
 
 ## Team Members
 - Olatubosun John ( Team Leader )

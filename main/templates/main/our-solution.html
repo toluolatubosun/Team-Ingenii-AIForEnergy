@@ -1,0 +1,28 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{name}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <br>
+    <h1 class="text-center">Team Ingenii | Our Solution</h1>
+
+    <h2>Problem</h2>
+    <p>Carbon Emission has been a major problem that is affecting a lot of people for a long time; causing various issues like global warming, climate change, and critical health issues. It has to do with the emission of various greenhouse gases; carbon dioxide, methane, nitrous oxides, and fluorinated gases. These greenhouse gases are majorly released from the burning of fossil fuels needed to generate energy for various human activities</p>
+    <br>
+
+    <h2>Solution</h2>
+    <p>Our approach of contributing to solving this problem of carbon emission comes from the area of Operations Research. As we are well aware, the transportation sector is one of the main contributors to the emission of carbon into the atmosphere, our software solution aims to address this problem from this particular aspect. We have gotten a <a href="https://drive.google.com/file/d/1vfPZuKLDK5BQyDAOpiouRDhvOC0OiHQF/view?usp=sharing" target="_blank">dataset</a> of numerous cars and their various features and their estimated carbon emission. Various machine learning algorithms are then used to analyze the data and determine the features that contribute to carbon emission. After the important features have been gotten they used by various models to predict the carbon emission of cars and then suggest alternative cars that emit less carbon</p>
+
+    <h2>Stage 1: Feature Selection</h2>
+    <p>Feature Selection has to do with determining which features actually contribute to carbon emission. It has to do with analyzing the various input features to the output features (in our case carbon emission) using various algorithms to determine the important features. The importance of feature selection is that it reduces computation time while also helping the manufactures in making decisions.</p>
+
+    <h2>Stage 2: Prediction & Suggestion</h2>
+    <p>Various Machine Learning models were created that take the important features from the feature selection process and use that to predict the carbon emission of cars based on the data inputted by the user. It then goes through our dataset of cars to determine an alternative car that emits less carbon while still being similar to the original car.</p>
+
+    <h2><a target="_blank" href="https://drive.google.com/file/d/1PK_7uUS_KQb-udFKvXjJnC-qv9JaMbyi/view"> Documentation File</a></h2>
+    <br>
+</div>
+{% endblock %}

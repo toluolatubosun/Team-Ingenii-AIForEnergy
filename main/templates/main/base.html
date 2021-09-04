@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Team Ingenii | {% block title %}{% endblock %}</title>
+
+		<link rel="icon" type="image/png" href="{% static 'img/icon.png' %}">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			* {
+				font-family: 'Montserrat';
+			}
+			.navbar {
+				background-color: #3399ff;
+			}
+		</style>
+</head>
+
+<body>
+	<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+			<a class="navbar-brand" href="#">Team Ingenii</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+							<a class="nav-link" href="/about-solution/">Our Solution</a>
+						</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/feature-selection/">Feature Selection</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/prediction-suggestion/">Prediction & Suggestion</a>
+					</li>
+				</ul>
+			</div>
+	</nav>
+
+	<br><br><br>
+
+	{% block content %}
+	{% endblock %}
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script>
+		$( document ).ready(function() {
+			$('#fill').click((e) => { 
+				e.preventDefault()
+				$('#make').val('ACURA')
+				$('#model').val('ILX')
+				$('#vehicle_class').val('COMPACT')
+				$('#engine_size').val(2)
+				$('#cylinders').val(4)
+				$('#transmission').val('AS')
+				$('#transmission_type').val('AS5')
+				$('#fuel_type').val('Z')
+				$('#fc_city').val(9.9)
+				$('#fc_hwy').val(6.7)
+				$('#fc_comb_l100').val(8.5)
+				$('#fc_comb_mpg').val(33)
+			})
+			$('#loading').click((e) => {
+				e.preventDefault()
+			})
+			$('#submit').click((e) => {
+				$('#loading').removeClass('d-none')
+				$('#submit').addClass('d-none')
+			})
+		});
+	</script>
+</body>
+</html>
